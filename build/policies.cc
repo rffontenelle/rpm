@@ -167,7 +167,7 @@ static ModuleRec newModule(const char *path, const char *name,
     mod->path = rpmGenPath(buildDir, NULL, path);
 
     if ((rpmioSlurp(mod->path, &raw, &rawlen)) != 0 || raw == NULL) {
-	rpmlog(RPMLOG_ERR, _("Failed to read  policy file: %s\n"),
+	rpmlog(RPMLOG_ERR, _("Failed to read policy file: %s\n"),
 	       mod->path);
 	goto err;
     }
